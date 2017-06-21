@@ -11,7 +11,7 @@ except urllib.error.URLError as e:
 try:
     urllib.request.urlopen("http://blogss.csdn.net")
 except urllib.error.URLError as e:
-    if hasattr(e,"code")
+    if hasattr(e,"code"):
         print(e.code)
-    if hasattr(e,"reson")
+    if hasattr(e,"reson"):
         print(e.reason)
