@@ -1,3 +1,6 @@
+__author__ ="CycloneBoy"
+__project__ = "DeepInPythonWebCrawer"
+
 import urllib.request
 
 file = urllib.request.urlopen("http://www.baidu.com")
@@ -20,3 +23,12 @@ filename = urllib.request.urlretrieve("http://edu.51cto.com",
 
 #清除URLretrieve执行所造成的缓存
 urllib.request.urlcleanup()
+
+# 获取抓取网页的信息、状态码和URL
+print(file.info())
+print(file.getcode())
+print(file.geturl())
+
+# 对URL进行编码解码
+print(urllib.request.quote("http://www.baidu.com"))
+print(urllib.request.unquote("http%3A//www.baidu.com"))
